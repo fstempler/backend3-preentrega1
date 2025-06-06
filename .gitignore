@@ -1,0 +1,9 @@
+# Node.js
+node_modules/
+.env
+dist/
+*.log
+
+# Sistemas
+.DS_Store
+Thumbs.db
