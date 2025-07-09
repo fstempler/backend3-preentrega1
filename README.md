@@ -70,13 +70,16 @@ Se testean los endpoints de:
 
 ---
 
-## 📦 Docker (pendiente)
+## 📦 Imagen Docker
 
-Cuando Docker esté disponible:
-- Se añadirá el Dockerfile
-- Se subirá la imagen a DockerHub
-- Se agregará el link aquí
-- Se documentará el uso del contenedor
+Este proyecto se puede ejecutar directamente desde Docker:
+
+**Docker Hub**: [https://hub.docker.com/r/fstempler/backend3-preentregafinal](https://hub.docker.com/r/fstempler/backend3-preentregafinal)
+
+### ▶ Para correrlo:
+
+```bash
+docker run -p 3001:3000 -e MONGODB_URI="TU_URI_DE_MONGO" fstempler/backend3-preentregafinal
 
 ---
 
