@@ -18,8 +18,8 @@ router.get('/mockingpets', (req, res) => {
     res.json({ status: 'success', pets });
 });
 
-router.get('/mockingusers', (req, res) => {
-    const users = generateUsers(50);
+router.get('/mockingusers', async (req, res) => {
+    const users = await generateUsers(50);
     res.json({ status: 'success', users });
 });
 
@@ -27,7 +27,7 @@ router.post('/generateData', async (req, res) => {
     const { users = 0, pets = 0 } = req.body; 
 
     try {
-        const fakeUsers = generateUsers(users);
+        const fakeUsers = await generateUsers(users);
         await userModel.insertMany(fakeUsers); 
         
         const fakePets = Array.from({ length: pets }).map(() => ({
